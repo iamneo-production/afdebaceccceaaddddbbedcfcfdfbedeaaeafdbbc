@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../Buttons/Button';
+import Button from '../Button/Button';
 const Card = ({ question, options, onClick }) => {
     return (
         <div className="card">

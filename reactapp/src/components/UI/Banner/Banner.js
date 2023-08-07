@@ -1,5 +1,5 @@
 import React from 'react'
-import StartButton from '../Buttons/StartButton'
+import StartButton from '../Button/Button'
 
 const Banner = ({setIsStart, isStart}) => {
   return (
