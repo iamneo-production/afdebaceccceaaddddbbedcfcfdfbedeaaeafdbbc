@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Card from '../Card/Card';
 import { quizQuestions } from '../../../Functions/quizQuestions';
-import StartButton from '../Buttons/StartButton';
+import StartButton from '../Button/StartButton';
 
 const Quiz = ({setIsStart, isStart}) => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
