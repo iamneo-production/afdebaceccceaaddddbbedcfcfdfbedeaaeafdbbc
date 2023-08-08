@@ -46,8 +46,8 @@ describe('Testing Card Component', () => {
         // Check if the component displays the question properly
 
         test('testcase9', () => {
-            expect(wrapper.find('h4').text()).toBe('What color is are the leaves ?');
-        })
+            expect(wrapper.find('h4').at(0).text()).toBe('What color are the leaves?');
+        })        
         
         // check if all the options are rendered according to the test data
 
