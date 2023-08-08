@@ -28,8 +28,8 @@ const Quiz = ({setIsStart, isStart}) => {
                     disabledOptions={disabledOptions}
                 />
             ) : (
-                <div>
-                    <h2>Quiz App</h2>
+                <div> 
+                    <h1>Quizz App</h1>
                     <div className='result'>
                         <h3>You have answered {score} / {quizQuestions.length} correctly!</h3>
                     </div>
