@@ -4,7 +4,7 @@ import Button from '../Button/Button';
 const Card = ({ question, options = [], onClick }) => {
     return (
         <div className="card">
-            <h2 className='heading'>{question}</h2>
+            <h4 className='heading'>{question}</h4>
             {Array.isArray(options) && options.length > 0 ? (
                 options.map((option, index) => (
                     <Button
