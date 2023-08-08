@@ -5,7 +5,7 @@ const Card = ({ question, options = [], onClick }) => {
     return (
         <div className="card">
             <h4 className='heading'>{question}</h4>
-            {Array.isArray(options) && options.length > 0 ? (
+            {Array.isArray(options) && options.length == 4 ? (
                 options.map((option, index) => (
                     <Button
                         key={index}
