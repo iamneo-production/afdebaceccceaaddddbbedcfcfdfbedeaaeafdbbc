@@ -1,5 +1,11 @@
-const Button = (props) => {
-    return <button onClick={props.handler} disabled={props.disabledState} value={props.value}>{props.children}</button>;
+import React from 'react';
+
+const Button = ({ option, onClick, disabled }) => {
+    return (
+        <button className='btn' disabled={disabled} onClick={onClick}>
+            {option}
+        </button>
+    );
 };
 
 export default Button;
