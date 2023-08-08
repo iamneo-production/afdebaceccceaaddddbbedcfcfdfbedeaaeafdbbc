@@ -1,22 +1,24 @@
 import React from "react";
 import Card from "../components/UI/Card/Card";
-import { mount } from "enzyme"; // Only import 'mount' function from enzyme
+import { shallow, mount } from "enzyme";
 
 var questionProp, wrapper, mockFunction;
+
+
 
 describe('Testing Card Component', () => {
     beforeEach(() => {
         mockFunction = jest.fn();
 
         questionProp = {
-            questionId: 2,
-            question: "What color are the leaves?", // Corrected question text
-            option1: "Blue",
-            option2: "Red",
-            option3: "Yellow",
-            option4: "Green",
-            answer: "Green"
-        };
+            questionId : 2,
+            question : "What color is are the leaves ?",
+            option1 : "Blue",
+            option2 : "Red",
+            option3 : "Yellow",
+            option4 : "Green",
+            answer : "Green"
+        }
 
         wrapper = mount(<Card 
             key={questionProp.questionId}
@@ -31,7 +33,9 @@ describe('Testing Card Component', () => {
             }}
             answer={questionProp.answer}
         />);
-    });
+        
+    })
+
 
     test('testcase8', () => {
         expect(wrapper.instance()).toBeDefined();
@@ -42,12 +46,13 @@ describe('Testing Card Component', () => {
         // Check if the component displays the question properly
 
         test('testcase9', () => {
-            expect(wrapper.find('h4').at(0).text()).toBe('What color are the leaves?'); // Corrected question text
-        });
-
+            expect(wrapper.find('h4').text()).toBe('What color is are the leaves ?');
+        })
+        
         // check if all the options are rendered according to the test data
 
         test('testcase10', () => {
+    
             let optionsList = ['Blue', 'Red', 'Yellow', 'Green'];
             let optionIterator = 0;
             expect(wrapper.find('button')).toHaveLength(4);
@@ -56,6 +61,7 @@ describe('Testing Card Component', () => {
                 expect(node.text()).toBe(optionsList[optionIterator]);
                 optionIterator++;
             });
-        });
-    });
-});
+        })
+    })
+
+})
