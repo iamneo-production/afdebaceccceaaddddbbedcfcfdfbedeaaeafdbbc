@@ -1,16 +1,23 @@
-import { useState } from 'react';
+import logo from './logo.svg';
 import './App.css';
-import Banner from './components/UI/Banner/Banner'
-import Quiz from './components/UI/Banner/Quiz';
-// import Quiz from './Quiz';
 
 function App() {
-  const [isStart, setIsStart] = useState(false);
-
   return (
     <div className="App">
-      {!isStart && <Banner setIsStart={setIsStart} isStart={isStart} />}
-      {isStart && <Quiz setIsStart={setIsStart} isStart={isStart} />}
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
 }
